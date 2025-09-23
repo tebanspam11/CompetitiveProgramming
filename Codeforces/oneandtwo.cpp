@@ -1,17 +1,16 @@
 //A. One and Two
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 
 void one_and_two() {
-    int t; 
-    cin >> t;
+    
+    int t; cin >> t;
 
     for(int i = 0; i < t; i++) {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr);
 
-        int n;
-        cin >> n;
+        int n; cin >> n;
         vector<string> array(n);
         
         for(int i = 0; i < n; i++) {
@@ -24,13 +23,13 @@ void one_and_two() {
         }
 
         if (twocount == 0) {
-        cout << 1 << "\n";
-        continue;
+            cout << 1 << "\n";
+            continue;
         }
 
         if (twocount % 2 == 1) {
-        cout << -1 << "\n";
-        continue;
+            cout << -1 << "\n";
+            continue;
         }
 
         int index = 0;
@@ -47,6 +46,8 @@ void one_and_two() {
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     one_and_two();
     return 0;
 }
